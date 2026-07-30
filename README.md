@@ -43,22 +43,15 @@ The ecosystem integrates:
 ▪️ **Initial Release:** 1,700 NFTs  
 ▪️ **Initial Liquidity:** 2000 AVAX
 ▪️ **Total Tax (Buy/Sell):** 2.85% 
-▪️ **Three Tax Components:**
-▪️ **Liquidity Tax:** 1.60%  
-▪️ **Marketing Tax:** 1.0%
-▪️ **Dividend Tax:** 0.25 (AVAX Reflections)  
 
-
+▪️ **Three Tax Components:**  
+▪️ **Liquidity Tax:** 1.60% Auto liquidity  
+▪️ **Marketing Tax:** 1%
+▪️ **Dividend Tax:** 0.25 (AVAX Reflections). 
 ▪️ **Total NFT Supply:** 10,000 NFTs  
 ▪️ **Initial Release:** 1,700 NFTs  
 ▪️ **Initial Liquidity:** 2000 AVAX 
 ▪️ **Total Tax (
-▪️ **Total Tax (
-▪️ **Total Tax (Buy/Sell):** 2.85%
-3 - Tax Components
-▪️ **
-▪️ **
-▪️ **
 
 ---
 
