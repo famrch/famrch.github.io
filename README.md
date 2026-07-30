@@ -38,16 +38,15 @@ The ecosystem integrates:
 ▪️ **Max Supply:** 1 Quadrillion FAMR  
 ▪️ **Token CA:**  
 [0xf7ec48d59B0E27380c339C66366bf55A93d19999](https://snowtrace.io/token/0xf7ec48d59B0E27380c339C66366bf55A93d19999?chainid=43114)  
-
 ▪️ **NFT Standard:** ERC-1155  
 ▪️ **Total NFT Supply:** 10,000 NFTs  
 ▪️ **Initial Release:** 1,700 NFTs  
 ▪️ **Initial Liquidity:** 2000 AVAX 
-▪️ **Total Tax (Buy/Sell):** 2.85% 
-        3 - Tax Components
-        ▪️ **Liquidity Tax:** 1.60%
-        ▪️ **Marketing Tax:** 1.0% 
-        ▪️ **Dividend Tax:** 0.25 (AVAX Reflections)  
+▪️ **Total Tax (Buy/Sell):** 2.85%
+3 - Tax Components
+▪️ **Liquidity Tax:** 1.60%
+▪️ **Marketing Tax:** 1.0%
+▪️ **Dividend Tax:** 0.25 (AVAX Reflections)  
 
 ---
 
