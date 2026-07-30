@@ -42,14 +42,12 @@ The ecosystem integrates:
 ▪️ **NFT Standard:** ERC-1155  
 ▪️ **Total NFT Supply:** 10,000 NFTs  
 ▪️ **Initial Release:** 1,700 NFTs  
-
 ▪️ **Initial Liquidity:** 2000 AVAX 
-
 ▪️ **Total Tax (Buy/Sell):** 2.85% 
         3 - Tax Components
-▪️ **Liquidity Tax:** 1.60%
-▪️ **Marketing Tax:** 1.0% 
-▪️ **Dividend Tax:** 0.25 (AVAX Reflections)  
+        ▪️ **Liquidity Tax:** 1.60%
+        ▪️ **Marketing Tax:** 1.0% 
+        ▪️ **Dividend Tax:** 0.25 (AVAX Reflections)  
 
 ---
 
@@ -68,13 +66,13 @@ The ecosystem integrates:
 ## Tokenomics & Hard Scarcity  
 
 | Allocation Category        | Amount (FAMR) | Notes |
-|----------------------------|--------------|------|
-| Liquidity Pool          | 100T         | Initial & strategic LP |
-| Lending Protocol     | 40T           | Protocol Value Reserve |
-| Staking Rewards (5 Yrs)    | 34.8T        | Controlled emissions |
-| NFT Burn Reservation       | 6.08T        | Guaranteed redemption |
-| Marketing & Ecosystem     | 14T            | Growth & development |
-| Developer Supply              | 5.12T         | Initial & strategic LP |
+|---------------------------------|-------------|----------|
+| Liquidity Pool              | 100T      | Initial & strategic LP |
+| Lending Protocol         | 40T        | Protocol Value Reserve |
+| Staking Rewards (5 Yrs)    | 34.8T    | Controlled emissions |
+| NFT Burn Reservation       | 6.08T    | Guaranteed redemption |
+| Marketing & Ecosystem     | 14T        | Growth & development |
+| Developer Supply              | 5.12T     | Initial & strategic LP |
 | Future Development 🔐     | 800T     | EVM Supply control |
 
 ---
