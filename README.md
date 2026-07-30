@@ -43,7 +43,7 @@ The ecosystem integrates:
 ▪️ **Total NFT Supply:** 10,000 NFTs  
 ▪️ **Initial Release:** 1,700 NFTs  
 
-▪️ **Initial Liquidity:** 10 BNB  
+▪️ **Initial Liquidity:** 2000 AVAX 
 
 ▪️ **Total Tax (Buy/Sell):** 2.85% 
         3 - Tax Components
