@@ -47,6 +47,7 @@ The ecosystem integrates:
 
 **Three Tax Components:**  
 ▪️ **Liquidity Tax:** 1.60% Auto liquidity
+
 ▪️ **Marketing Tax:** 1%  
 ▪️ **Dividend Tax:** 0.25% (AVAX Reflections) 
 
