@@ -69,20 +69,19 @@ The ecosystem integrates:
 
 | Allocation Category        | Amount (FAMR) | Notes |
 |----------------------------|--------------|------|
-| Liquidity                  | 100T         | Initial & strategic LP |
-| Staking Rewards (5 Years)  | 34.8T        | Controlled emissions |
+| Liquidity Pool          | 100T         | Initial & strategic LP |
+| Lending Protocol     | 40T           | Protocol Value Reserve |
+| Staking Rewards (5 Yrs)    | 34.8T        | Controlled emissions |
 | NFT Burn Reservation       | 6.08T        | Guaranteed redemption |
-| Marketing & Ecosystem      | 19.12T       | Growth & development |
-| Future Development (locked)| 840T         | Supply control |
+| Marketing & Ecosystem     | 14T            | Growth & development |
+| Developer Supply              | 5.12T         | Initial & strategic LP |
+| Future Development 🔐     | 800T     | EVM Supply control |
 
 ---
 
 ## Hard Scarcity Mechanism  
 
-- **840 Trillion FAMR** is permanently currently time-locked for future use and/or to be burnt. 
-- Activation after:
-  - 500 NFT mints  
-  - Governance confirmation  
+- **800 Trillion FAMR** is permanently currently time-locked for future use and/or to be burnt. 
 
 This enforces long-term supply discipline.
 
@@ -173,13 +172,13 @@ Total Annual Emission: **6.96T FAMR**
 
 ## 7. Per NFT Emissions  
 
-### AAAFAMR (120%)
+### AAAFAMR (110%)
 - Annual: 982,352,941  
 - Daily: 2,691,382  
 - Hourly: 112,141
 - Burn: 1,300,000,000
 
-### BBBFAMR (100%)
+### BBBFAMR (95%)
 - Annual: 818,823,529  
 - Daily: 2,243,353  
 - Hourly: 93,473
@@ -256,6 +255,7 @@ FamrChain is designed to:
 - Enable deflation through manual burn  
 - Transition into real-yield system
 - Development of Own EVM
+- Develop a Lending Protocol
 
 ---
 
