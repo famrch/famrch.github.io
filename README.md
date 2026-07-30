@@ -40,12 +40,14 @@ The ecosystem integrates:
 [0xf7ec48d59B0E27380c339C66366bf55A93d19999](https://snowtrace.io/token/0xf7ec48d59B0E27380c339C66366bf55A93d19999?chainid=43114)  
 ▪️ **NFT Standard:** ERC-1155  
 ▪️ **Total Tax:** 2.85% (Buy & Sell)
+
 ▪️ **Total NFT Supply:** 10,000 NFTs  
 ▪️ **Initial Release:** 1,700 NFTs  
 ▪️ **Initial Liquidity:** 2000 AVAX
 
 **Three Tax Components:**  
 ▪️ **Liquidity Tax:** 1.60% Auto liquidity
+
 ▪️ **Marketing Tax:** 1%  
 ▪️ **Dividend Tax:** 0.25% (AVAX Reflections) 
 
