@@ -7,19 +7,21 @@
 <style>
 /* THEME VARIABLES */
 :root{
---bg:#050505;
---surface:#0a0a0a;
---surface-elevated:#111111;
---text:#fafafa;
---text-secondary:#a3a3a3;
---text-muted:#737373;
---gold:#d4af37;
---gold-bright:#f4d03f;
---gold-dim:#b8941d;
---border:rgba(212,175,55,0.12);
---border-hover:rgba(212,175,55,0.3);
+--bg:#04100f;
+--surface:#071a18;
+--surface-elevated:#0c2422;
+--text:#f0fdfa;
+--text-secondary:#9fb8b5;
+--text-muted:#6b8683;
+--gold:#2dd4bf;
+--gold-bright:#5eead4;
+--gold-dim:#0d9488;
+--border:rgba(45,212,191,0.14);
+--border-hover:rgba(45,212,191,0.35);
 --shadow:rgba(0,0,0,0.4);
 --success:#22c55e;
+--teal-deep:#042f2e;
+--teal-mid:#0f766e;
 --font-display:'Playfair Display','Georgia',serif;
 --font-body:'Inter','SF Pro Display',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
 --font-mono:'JetBrains Mono','Fira Code',monospace;
@@ -27,18 +29,18 @@
 }
 
 [data-theme="light"]{
---bg:#fafaf9;
+--bg:#f4fbfa;
 --surface:#ffffff;
---surface-elevated:#f5f5f4;
---text:#1c1917;
---text-secondary:#57534e;
---text-muted:#a8a29e;
---gold:#b45309;
---gold-bright:#d97706;
---gold-dim:#92400e;
---border:rgba(180,83,9,0.15);
---border-hover:rgba(180,83,9,0.4);
---shadow:rgba(0,0,0,0.08);
+--surface-elevated:#e9f7f5;
+--text:#0b2b28;
+--text-secondary:#3f6663;
+--text-muted:#82a4a1;
+--gold:#0d9488;
+--gold-bright:#14b8a6;
+--gold-dim:#115e59;
+--border:rgba(13,148,136,0.16);
+--border-hover:rgba(13,148,136,0.4);
+--shadow:rgba(4,32,29,0.08);
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -108,17 +110,17 @@ font-size:10px;
 /* NAVIGATION */
 nav{
 position:fixed;top:0;width:100%;z-index:1000;
-background:rgba(var(--bg-rgb,5,5,5),0.85);
+background:rgba(var(--bg-rgb,4,16,15),0.85);
 backdrop-filter:blur(20px);
 border-bottom:1px solid var(--border);
 transition:var(--transition);
 }
 [data-theme="light"] nav{
-background:rgba(250,250,249,0.85);
---bg-rgb:250,250,249;
+background:rgba(244,251,250,0.85);
+--bg-rgb:244,251,250;
 }
 nav.scrolled{
-background:rgba(var(--bg-rgb,5,5,5),0.95);
+background:rgba(var(--bg-rgb,4,16,15),0.95);
 border-bottom-color:var(--border-hover);
 }
 nav .wrap{
@@ -280,7 +282,7 @@ text-transform:uppercase;letter-spacing:0.08em;font-weight:600;
 transition:var(--transition);margin-top:12px;
 }
 .copy-btn:hover{
-border-color:var(--gold);background:rgba(212,175,55,0.08);
+border-color:var(--gold);background:rgba(45,212,191,0.08);
 transform:translateY(-1px);
 }
 .tokenomics-list{margin-top:48px;}
@@ -347,6 +349,12 @@ padding:24px;transition:var(--transition);
 border-color:var(--border-hover);
 transform:translateY(-4px);box-shadow:0 16px 32px var(--shadow);
 }
+.nft-image{
+width:100%;aspect-ratio:1/1;border-radius:12px;margin-bottom:16px;
+overflow:hidden;position:relative;border:1px solid var(--border);
+background:radial-gradient(circle at 30% 20%,var(--teal-mid,#0f766e),var(--bg) 70%);
+}
+.nft-image svg{width:100%;height:100%;display:block;}
 .nft-tier{
 font-family:var(--font-body);font-size:10px;font-weight:700;
 text-transform:uppercase;letter-spacing:0.15em;
@@ -379,7 +387,7 @@ font-family:var(--font-body);font-size:13px;font-weight:500;
 color:var(--text);
 }
 .nft-burn{
-padding:12px;background:rgba(212,175,55,0.06);border-radius:8px;
+padding:12px;background:rgba(45,212,191,0.06);border-radius:8px;
 border:1px solid var(--border);text-align:center;
 }
 .nft-burn-label{
@@ -408,10 +416,10 @@ background:var(--gold);color:var(--bg);
 }
 .btn-primary:hover{
 background:var(--gold-bright);transform:translateY(-2px);
-box-shadow:0 8px 24px rgba(212,175,55,0.25);
+box-shadow:0 8px 24px rgba(45,212,191,0.25);
 }
 [data-theme="light"] .btn-primary:hover{
-box-shadow:0 8px 24px rgba(180,83,9,0.2);
+box-shadow:0 8px 24px rgba(13,148,136,0.2);
 }
 .btn-secondary{
 background:transparent;color:var(--text);border:1.5px solid var(--border);
@@ -450,6 +458,72 @@ font-size:17px;color:var(--text-secondary);line-height:1.9;text-align:center;
 }
 .protocol-note strong{
 color:var(--gold);font-family:var(--font-body);
+}
+
+/* ROADMAP SECTION */
+.roadmap-section{background:var(--surface);}
+.roadmap-track{
+position:relative;max-width:900px;margin:60px auto 0;
+padding-left:32px;border-left:2px solid var(--border);
+}
+.roadmap-phase{
+position:relative;padding-bottom:56px;
+}
+.roadmap-phase:last-child{padding-bottom:0;}
+.roadmap-phase::before{
+content:'';position:absolute;left:-39px;top:4px;
+width:16px;height:16px;border-radius:50%;
+background:var(--bg);border:2px solid var(--gold);
+}
+.roadmap-phase.current::before{
+background:var(--gold);box-shadow:0 0 0 6px rgba(45,212,191,0.15);
+}
+.roadmap-eyebrow{
+font-family:var(--font-mono);font-size:12px;color:var(--gold);
+text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;font-weight:600;
+}
+.roadmap-phase h3{
+font-family:var(--font-display);font-size:24px;text-align:left;
+margin-bottom:14px;color:var(--text);font-weight:600;
+}
+.roadmap-phase p{
+font-size:16px;color:var(--text-secondary);line-height:1.8;margin-bottom:16px;
+}
+.roadmap-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+.roadmap-tag{
+font-family:var(--font-mono);font-size:12px;padding:8px 14px;
+border-radius:8px;background:var(--surface-elevated);
+border:1px solid var(--border);color:var(--text-secondary);
+}
+.roadmap-subgrid{
+display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px;
+}
+.roadmap-card{
+padding:20px 22px;border:1px solid var(--border);border-radius:12px;
+background:var(--surface-elevated);transition:var(--transition);
+}
+.roadmap-card:hover{border-color:var(--gold);transform:translateY(-2px);}
+.roadmap-card h4{
+font-family:var(--font-display);font-size:17px;color:var(--gold);
+margin-bottom:8px;font-weight:600;text-align:left;
+}
+.roadmap-card p{font-size:14px;color:var(--text-secondary);line-height:1.7;margin-bottom:0;}
+.roadmap-token-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.roadmap-token{
+font-family:var(--font-mono);font-weight:600;font-size:13px;
+padding:6px 12px;border-radius:20px;color:var(--gold-bright);
+background:rgba(45,212,191,0.08);border:1px solid var(--border);
+}
+.roadmap-closing{
+margin-top:56px;padding:36px;text-align:center;
+border:1px solid var(--border);border-radius:16px;background:var(--surface-elevated);
+}
+.roadmap-closing p{font-size:18px;color:var(--text-secondary);line-height:1.8;}
+.roadmap-closing strong{color:var(--gold);}
+@media(max-width:700px){
+.roadmap-subgrid{grid-template-columns:1fr;}
+.roadmap-track{padding-left:24px;}
+.roadmap-phase::before{left:-31px;}
 }
 
 /* FAQ SECTION */
@@ -592,6 +666,7 @@ border-bottom:1px solid var(--border);font-size:14px;
 <a href="#hero" class="active">About</a>
 <a href="#token">Token</a>
 <a href="#rarity">NFTs</a>
+<a href="#roadmap">Roadmap</a>
 <a href="#protocol">Protocol</a>
 <a href="#faq">FAQ</a>
 <a href="#socials">Connect</a>
@@ -743,6 +818,17 @@ border-bottom:1px solid var(--border);font-size:14px;
 <div class="nft-carousel">
 <!-- TIER 1 -->
 <div class="nft-card">
+<div class="nft-image">
+<svg viewBox="0 0 100 100" role="img" aria-label="FieldChick NFT artwork">
+<circle cx="50" cy="50" r="48" style="fill:var(--teal-deep,#042f2e)"/>
+<circle cx="50" cy="58" r="22" style="fill:var(--gold-dim)"/>
+<circle cx="50" cy="58" r="22" style="fill:var(--gold)" opacity="0.55"/>
+<path d="M30 60 Q18 56 20 46 Q28 48 32 56Z" style="fill:var(--gold-bright)" opacity="0.8"/>
+<circle cx="43" cy="53" r="2.6" style="fill:var(--teal-deep,#042f2e)"/>
+<path d="M50 55 L57 58 L50 61Z" style="fill:var(--gold-dim)"/>
+<path d="M42 32 Q50 20 46 12 Q56 18 54 30Z" style="fill:var(--gold-bright)" opacity="0.7"/>
+</svg>
+</div>
 <div class="nft-tier">Tier 1 • 70% APY</div>
 <h3 class="nft-name">FieldChick</h3>
 <p class="nft-type">EEEFAMR</p>
@@ -762,6 +848,18 @@ border-bottom:1px solid var(--border);font-size:14px;
 
 <!-- TIER 2 -->
 <div class="nft-card">
+<div class="nft-image">
+<svg viewBox="0 0 100 100" role="img" aria-label="PrimeLayer NFT artwork">
+<circle cx="50" cy="50" r="48" style="fill:var(--teal-deep,#042f2e)"/>
+<circle cx="50" cy="50" r="34" style="fill:none;stroke:var(--gold-dim);stroke-width:2" opacity="0.6"/>
+<circle cx="50" cy="50" r="26" style="fill:none;stroke:var(--gold);stroke-width:2" opacity="0.75"/>
+<ellipse cx="50" cy="60" rx="20" ry="18" style="fill:var(--gold-dim)"/>
+<ellipse cx="50" cy="60" rx="20" ry="18" style="fill:var(--gold)" opacity="0.5"/>
+<ellipse cx="50" cy="34" rx="12" ry="10" style="fill:var(--gold-bright)" opacity="0.85"/>
+<circle cx="46" cy="32" r="2.4" style="fill:var(--teal-deep,#042f2e)"/>
+<path d="M58 34 L67 30 L58 40Z" style="fill:var(--gold-dim)"/>
+</svg>
+</div>
 <div class="nft-tier">Tier 2 • 75% APY</div>
 <h3 class="nft-name">PrimeLayer</h3>
 <p class="nft-type">DDDFAMR</p>
@@ -781,6 +879,18 @@ border-bottom:1px solid var(--border);font-size:14px;
 
 <!-- TIER 3 -->
 <div class="nft-card">
+<div class="nft-image">
+<svg viewBox="0 0 100 100" role="img" aria-label="ImperialBroiler NFT artwork">
+<circle cx="50" cy="50" r="48" style="fill:var(--teal-deep,#042f2e)"/>
+<ellipse cx="50" cy="62" rx="24" ry="20" style="fill:var(--gold-dim)"/>
+<path d="M50 46 L64 58 L50 78 L36 58Z" style="fill:var(--gold)" opacity="0.85"/>
+<path d="M50 52 L58 59 L50 70 L42 59Z" style="fill:var(--gold-bright)" opacity="0.9"/>
+<ellipse cx="50" cy="32" rx="11" ry="9" style="fill:var(--gold-bright)"/>
+<circle cx="46" cy="30" r="2.4" style="fill:var(--teal-deep,#042f2e)"/>
+<path d="M58 32 L68 27 L58 38Z" style="fill:var(--gold-dim)"/>
+<path d="M44 22 Q50 14 56 22" style="fill:none;stroke:var(--gold)" stroke-width="3" opacity="0.8"/>
+</svg>
+</div>
 <div class="nft-tier">Tier 3 • 85% APY</div>
 <h3 class="nft-name">ImperialBroiler</h3>
 <p class="nft-type">CCCFAMR</p>
@@ -800,6 +910,17 @@ border-bottom:1px solid var(--border);font-size:14px;
 
 <!-- TIER 4 -->
 <div class="nft-card">
+<div class="nft-image">
+<svg viewBox="0 0 100 100" role="img" aria-label="HarvestGrower NFT artwork">
+<circle cx="50" cy="50" r="48" style="fill:var(--teal-deep,#042f2e)"/>
+<ellipse cx="50" cy="62" rx="23" ry="19" style="fill:var(--gold-dim)"/>
+<ellipse cx="50" cy="62" rx="23" ry="19" style="fill:var(--gold)" opacity="0.45"/>
+<ellipse cx="50" cy="33" rx="11" ry="9" style="fill:var(--gold-bright)"/>
+<circle cx="46" cy="31" r="2.3" style="fill:var(--teal-deep,#042f2e)"/>
+<path d="M58 33 L68 29 L58 39Z" style="fill:var(--gold-dim)"/>
+<path d="M34 20 L36 32 M42 14 L43 30 M50 12 L50 30 M58 14 L57 30 M66 20 L64 32" style="fill:none;stroke:var(--gold-bright);stroke-width:2.4" stroke-linecap="round" opacity="0.9"/>
+</svg>
+</div>
 <div class="nft-tier">Tier 4 • 95% APY</div>
 <h3 class="nft-name">HarvestGrower</h3>
 <p class="nft-type">BBBFAMR</p>
@@ -819,6 +940,21 @@ border-bottom:1px solid var(--border);font-size:14px;
 
 <!-- TIER 5 -->
 <div class="nft-card">
+<div class="nft-image">
+<svg viewBox="0 0 100 100" role="img" aria-label="SovereignHen NFT artwork">
+<circle cx="50" cy="50" r="48" style="fill:var(--teal-deep,#042f2e)"/>
+<g style="stroke:var(--gold-bright);stroke-width:1.6" opacity="0.55">
+<path d="M50 6 L50 16"/><path d="M50 84 L50 94"/><path d="M6 50 L16 50"/><path d="M84 50 L94 50"/>
+<path d="M18 18 L25 25"/><path d="M75 75 L82 82"/><path d="M82 18 L75 25"/><path d="M25 75 L18 82"/>
+</g>
+<ellipse cx="50" cy="64" rx="25" ry="20" style="fill:var(--gold-dim)"/>
+<ellipse cx="50" cy="64" rx="25" ry="20" style="fill:var(--gold)" opacity="0.55"/>
+<ellipse cx="50" cy="34" rx="12" ry="10" style="fill:var(--gold-bright)"/>
+<circle cx="46" cy="32" r="2.5" style="fill:var(--teal-deep,#042f2e)"/>
+<path d="M58 34 L69 29 L58 40Z" style="fill:var(--gold-dim)"/>
+<path d="M38 22 L42 12 L48 20 L52 10 L58 20 L62 12 L66 22Z" style="fill:var(--gold-bright)"/>
+</svg>
+</div>
 <div class="nft-tier">Tier 5 • 110% APY</div>
 <h3 class="nft-name">SovereignHen</h3>
 <p class="nft-type">AAAFAMR</p>
@@ -841,6 +977,90 @@ border-bottom:1px solid var(--border);font-size:14px;
 <a href="https://mint.mpty.site" target="_blank" class="btn btn-primary">Mint on dApp</a>
 <a href="#" target="_blank" class="btn btn-secondary">EmptySEA Marketplace</a>
 </div>
+</div>
+</section>
+
+<section class="roadmap-section" id="roadmap">
+<div class="container">
+<p class="section-label">The Path Ahead</p>
+<h2 class="section-title">FamrChain Vision 🚀</h2>
+<p class="section-subtitle">FamrChain — also known as <strong>FChain</strong> — is building toward a full blockchain ecosystem, with a phased roadmap evolving from NFTs and digital assets into its own EVM Layer-1 and DeFi infrastructure.</p>
+
+<div class="roadmap-track">
+
+<div class="roadmap-phase current">
+<div class="roadmap-eyebrow">Q3–Q4 2026</div>
+<h3>Genesis Launch</h3>
+<p>FamrChain is set for a quiet launch on the <strong>#LBooster (v2.0) Product dApp</strong>, featuring a collection of <strong>10,000 FChain.NFTs</strong>, released in carefully structured batches:</p>
+<div class="roadmap-subgrid">
+<div class="roadmap-card">
+<h4>Genesis Launch</h4>
+<p>1,700 Collectibles</p>
+</div>
+<div class="roadmap-card">
+<h4>Exodus Release</h4>
+<p>3,300 Collectibles</p>
+</div>
+<div class="roadmap-card">
+<h4>Levitical Order</h4>
+<p>5,000 Collectibles</p>
+</div>
+</div>
+<p style="margin-top:24px;">The <strong>FAMR</strong> asset has been deployed on <strong>Avalanche C-Chain</strong>, featuring <strong>AVAX reflections</strong> and a FAMR-based tax mechanism. A <strong>FAMR liquidity pool</strong> will be added during the initial NFT staking phase, targeted between <strong>45–90 days</strong>.</p>
+</div>
+
+<div class="roadmap-phase">
+<div class="roadmap-eyebrow">Q2 2027</div>
+<h3>FChain EVM Layer-1</h3>
+<p>The next major phase will focus on developing the <strong>FChain EVM</strong> as a Layer-1, leveraging Avalanche dependencies. FChain will introduce custom, verified bridged <strong>FRC20 assets</strong>, designed to provide access to major digital assets within the FChain ecosystem:</p>
+<div class="roadmap-token-list">
+<span class="roadmap-token">BTCf</span>
+<span class="roadmap-token">ETHf</span>
+<span class="roadmap-token">AVAXf</span>
+<span class="roadmap-token">BNBf</span>
+<span class="roadmap-token">USDTf</span>
+<span class="roadmap-token">USDCf</span>
+<span class="roadmap-token">MTYf</span>
+<span class="roadmap-token">USBT</span>
+</div>
+</div>
+
+<div class="roadmap-phase">
+<div class="roadmap-eyebrow">Ecosystem Build-Out</div>
+<h3>EmptySWAP — FChain's Primary DEX</h3>
+<p><strong>EmptySWAP</strong>, developed by <strong>EmptyHUB</strong>, is planned as the primary decentralized exchange for the FChain EVM, providing core swap and liquidity infrastructure for the ecosystem.</p>
+</div>
+
+<div class="roadmap-phase">
+<div class="roadmap-eyebrow">Ecosystem Build-Out</div>
+<h3>FamrScreener — Market Intelligence</h3>
+<p><strong>FamrScreener</strong> looks forward to building a strong partnership with <strong>FireScreener</strong>. It is planned as a DexScreener-style market intelligence platform serving selected networks, initially focusing on:</p>
+<div class="roadmap-tags">
+<span class="roadmap-tag">Avax C-Chain</span>
+<span class="roadmap-tag">Ethereum</span>
+<span class="roadmap-tag">BSC</span>
+<span class="roadmap-tag">FChain</span>
+</div>
+</div>
+
+<div class="roadmap-phase">
+<div class="roadmap-eyebrow">Ecosystem Build-Out</div>
+<h3>Famr Finance — DeFi Lending</h3>
+<p><strong>Famr Finance</strong> will be an over-collateralized lending protocol powered by:</p>
+<div class="roadmap-tags">
+<span class="roadmap-tag">FAMR</span>
+<span class="roadmap-tag">MTYf</span>
+<span class="roadmap-tag">USDTf</span>
+<span class="roadmap-tag">USBT</span>
+</div>
+</div>
+
+</div>
+
+<div class="roadmap-closing">
+<p>The long-term vision is to build a connected ecosystem where <strong>NFTs, digital assets, blockchain infrastructure, trading, market analytics,</strong> and <strong>DeFi</strong> operate together under FChain.<br><br>FamrChain isn't just launching a token. <strong>It is building an ecosystem, African's Strongest EVM🚀</strong></p>
+</div>
+
 </div>
 </section>
 
@@ -890,10 +1110,10 @@ border-bottom:1px solid var(--border);font-size:14px;
 </button>
 <div class="faq-answer">
 <div class="faq-answer-content">
-<p>FarmChain tokens digitizes Farm Livestocks produce using surreal NFTs motion arts on <strong>Avax C-Chain, and will soon become it's own native EVM</strong>. An Onchain Fchain.NFT stake or burn attracts <em>$FAMR</em> rewards.</p>
+<p>FamrChain tokens digitizes Farm Livestocks produce using surreal NFTs motion arts on <strong>Avax C-Chain, and will soon become it's own native EVM</strong>. An Onchain Fchain.NFT stake or burn attracts <em>$FAMR</em> rewards.</p>
 <p>Here's how it works simply:</p>
 <ul>
-<li>Investors mints a limited ERC1155 standard NFTs as low as <strong>4.00 AVAX</strong>. These funds supports protocol liquidity as its abstracted to a community multisig, for liquidity boosting.</li>
+<li>Investors mints a limited ERC1155 standard NFTs as low as <strong>4.00 AVAX</strong>. These funds supports protocol liquidity as its abstracted through a community multisig, for liquidity boosting.</li>
 <li>These NFTs can earn <strong>$FAMR</strong> into owners wallet when staked.</li>
 <li>Fchain.NFTs can also be burnt to earn <strong>$FAMR</strong>.</li>
 </ul>
@@ -1031,7 +1251,7 @@ Dev Contact
 
 <footer>
 <div class="container">
-<p>© 2026 FAMRCHAIN. All rights reserved. With ❤️ on AVAX C-CHAIN.</p>
+<p>© 2026 FCHAIN. All rights reserved. With ❤️ on AVAX C-CHAIN.</p>
 </div>
 </footer>
 
